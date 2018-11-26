@@ -9,9 +9,11 @@ environment:
   AI_PATH: C:\Program Files (x86)\Caphyon\Advanced Installer 13.7\bin\x86
 
 init:
-  - Start-FileDownload espotek.com/ai137.msi
-  - msiexec /ju ai137.msi /qn
   - set PATH=%AI_PATH%;%PATH%
+
+install:
+  - ps: Start-FileDownload 'espotek.com/ai137.msi'
+  - msiexec /ju ai137.msi /qn
 
 build_script:
   - AdvancedInstaller.com /rebuild Labrador.aip
