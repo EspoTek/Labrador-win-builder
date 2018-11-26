@@ -10,4 +10,4 @@ install:
   - msiexec /ju ai137.msi /qn
 
 build_script:
-  - "C:/Program Files (x86)/Caphyon/Advanced Installer 13.7/bin/x86/AdvancedInstaller.com" /rebuild Labrador.aip
+  - call "C:/Program Files (x86)/Caphyon/Advanced Installer 13.7/bin/x86/AdvancedInstaller.com" /rebuild Labrador.aip
