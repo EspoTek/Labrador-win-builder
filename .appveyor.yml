@@ -20,5 +20,3 @@ build_script:
 artifacts:
   - path: Labrador-SetupFiles\Labrador_Installer.exe
     name: Labrador_Installer
-    type: zip
-
