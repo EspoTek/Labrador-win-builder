@@ -12,7 +12,7 @@ init:
   - set PATH=%AI_PATH%;%PATH%
 
 install:
-  - ps: Start-FileDownload 'espotek.com/ai137.msi'
+  - ps: Start-FileDownload 'http://espotek.com/ai137.msi'
   - msiexec /ju ai137.msi /qn
 
 build_script:
