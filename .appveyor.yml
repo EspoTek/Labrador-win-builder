@@ -11,7 +11,7 @@ clone_depth: 1
 
 install:
   - ps: Start-FileDownload 'http://espotek.com/ai137.msi'
-  - msiexec /ju ai137.msi /qn
+  - msiexec /i ai137.msi /qn
   - call "C:/Program Files (x86)/Caphyon/Advanced Installer 13.7/bin/x86/AdvancedInstaller.com" /register %ai_key%
 
 build_script:
