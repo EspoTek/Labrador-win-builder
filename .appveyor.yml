@@ -3,8 +3,6 @@ version: build{build}
 environment:
   ai_key:
     secure: lGtLb+QcD8ePODVc6PQKXl2xcTbvPE3feqMG82EEY5Ca73tgFYoYlMAykSsrpO3c
-  access_token:
-    secure: DXAumCpZjJ3erz0OmBJybIJTwux9uSrdtqKtezd4wI9b2ELz3NELPwZfp+WfYKtb
 
 image: Visual Studio 2017
 
@@ -27,7 +25,8 @@ deploy:
   tag: continuous-win32
   description: 'Labrador Installer for Windows (32 and 64-bit)'
   provider: GitHub
-  auth_token: %access_token%
+  auth_token:
+      secure: DXAumCpZjJ3erz0OmBJybIJTwux9uSrdtqKtezd4wI9b2ELz3NELPwZfp+WfYKtb
   repository: EspoTek/Labrador
   draft: false
   prerelease: false
