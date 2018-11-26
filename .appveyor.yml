@@ -5,15 +5,9 @@ image: Visual Studio 2017
 clone_folder: c:\dev\labrador-win-builder
 clone_depth: 1
 
-environment:
-  AI_PATH: "C:\Program Files (x86)\Caphyon\Advanced Installer 13.7\bin\x86"
-
-init:
-  - set PATH=%AI_PATH%;%PATH%
-
 install:
   - ps: Start-FileDownload 'http://espotek.com/ai137.msi'
   - msiexec /ju ai137.msi /qn
 
 build_script:
-  - AdvancedInstaller.com /rebuild Labrador.aip
+  - "C:\Program Files (x86)\Caphyon\Advanced Installer 13.7\bin\x86\AdvancedInstaller.com" /rebuild Labrador.aip
