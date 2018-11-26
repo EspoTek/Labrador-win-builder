@@ -3,6 +3,9 @@ version: build{build}
 environment:
   ai_key:
     secure: lGtLb+QcD8ePODVc6PQKXl2xcTbvPE3feqMG82EEY5Ca73tgFYoYlMAykSsrpO3c
+  access_token:
+    secure: DXAumCpZjJ3erz0OmBJybIJTwux9uSrdtqKtezd4wI9b2ELz3NELPwZfp+WfYKtb
+
 
 image: Visual Studio 2017
 
@@ -20,3 +23,15 @@ build_script:
 artifacts:
   - path: Labrador-SetupFiles\Labrador_Installer.exe
     name: Labrador_Installer
+
+deploy:
+  release: Labrador-v$(appveyor_build_version)
+  description: 'Labrador Installer for Windows (32 and 64-bit)'
+  provider: GitHub
+  auth_token:
+    secure: access_token
+  repository: EspoTek/Labrador
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
