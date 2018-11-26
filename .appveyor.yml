@@ -24,11 +24,11 @@ artifacts:
     name: Labrador_Installer
 
 deploy:
-  release: Labrador-v$(appveyor_build_version)
+  tag: continuous-win32
   description: 'Labrador Installer for Windows (32 and 64-bit)'
   provider: GitHub
   auth_token:
-    secure: access_token
+    secure: %access_token%
   repository: EspoTek/Labrador
   draft: false
   prerelease: false
