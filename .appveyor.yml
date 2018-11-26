@@ -6,7 +6,7 @@ clone_folder: c:\dev\labrador-win-builder
 clone_depth: 1
 
 environment:
-  - AI_PATH: "C:\Program Files (x86)\Caphyon\Advanced Installer 13.7\bin\x86"
+  - AI_PATH: C:\Program Files (x86)\Caphyon\Advanced Installer 13.7\bin\x86
 
 init:
   - Start-FileDownload espotek.com/ai137.msi
