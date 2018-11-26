@@ -27,8 +27,7 @@ deploy:
   tag: continuous-win32
   description: 'Labrador Installer for Windows (32 and 64-bit)'
   provider: GitHub
-  auth_token:
-    secure: %access_token%
+  auth_token: %access_token%
   repository: EspoTek/Labrador
   draft: false
   prerelease: false
