@@ -29,6 +29,6 @@ deploy:
       secure: DXAumCpZjJ3erz0OmBJybIJTwux9uSrdtqKtezd4wI9b2ELz3NELPwZfp+WfYKtb
   repository: EspoTek/Labrador
   draft: false
-  prerelease: false
+  prerelease: true
   on:
     branch: master                 # release from master branch only
