@@ -6,7 +6,6 @@ environment:
   access_token:
     secure: DXAumCpZjJ3erz0OmBJybIJTwux9uSrdtqKtezd4wI9b2ELz3NELPwZfp+WfYKtb
 
-
 image: Visual Studio 2017
 
 clone_folder: c:\dev\labrador-win-builder
