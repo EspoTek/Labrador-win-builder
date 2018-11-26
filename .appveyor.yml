@@ -16,3 +16,9 @@ install:
 
 build_script:
   - call "C:/Program Files (x86)/Caphyon/Advanced Installer 13.7/bin/x86/AdvancedInstaller.com" /rebuild Labrador.aip
+
+Labrador_Installer.exe:
+  - path: Labrador-SetupFiles\Labrador_Installer.exe
+    name: Labrador_Installer
+    type: zip
+
