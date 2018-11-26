@@ -1,5 +1,9 @@
 version: build{build}
 
+environment:
+  ai_key:
+    secure: lGtLb+QcD8ePODVc6PQKXl2xcTbvPE3feqMG82EEY5Ca73tgFYoYlMAykSsrpO3c
+
 image: Visual Studio 2017
 
 clone_folder: c:\dev\labrador-win-builder
@@ -8,6 +12,7 @@ clone_depth: 1
 install:
   - ps: Start-FileDownload 'http://espotek.com/ai137.msi'
   - msiexec /ju ai137.msi /qn
+  - call "C:/Program Files (x86)/Caphyon/Advanced Installer 13.7/bin/x86/AdvancedInstaller.com" /register %ai_key%
 
 build_script:
   - call "C:/Program Files (x86)/Caphyon/Advanced Installer 13.7/bin/x86/AdvancedInstaller.com" /rebuild Labrador.aip
