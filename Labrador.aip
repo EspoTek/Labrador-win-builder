@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="13.7" version="13.7" Modules="professional" RootPath="." Language="en" Id="{7605A8A2-F0D4-4C69-90ED-47AB2D86C1AF}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="13.7" version="15.7" Modules="professional" RootPath="." Language="en" Id="{7605A8A2-F0D4-4C69-90ED-47AB2D86C1AF}">
   <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
-    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiJavaComponent;MsiDriverPackagesComponent;UserAccountsComponent;ScheduledTasksComponent;SqlConnectionComponent;AutorunComponent;FirewallExceptionComponent;GameUxComponent;MsiDirectEditorComponent;SharePointSlnComponent;SilverlightSlnComponent;MultipleInstancesComponent;SccmComponent;ActSyncAppComponent"/>
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiJavaComponent;MsiDriverPackagesComponent;UserAccountsComponent;ScheduledTasksComponent;SqlConnectionComponent;AutorunComponent;FirewallExceptionComponent;GameUxComponent;MsiDirectEditorComponent;SharePointSlnComponent;SilverlightSlnComponent;MultipleInstancesComponent;SccmComponent;ActSyncAppComponent;FixupComponent"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
@@ -9,6 +9,7 @@
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPCONTACT" Value="admin@espotek.com"/>
+    <ROW Property="ARPNOREPAIR" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="ARPPRODUCTICON" Value="Labrador.exe" Type="8"/>
     <ROW Property="ARPURLINFOABOUT" Value="espotek.com"/>
     <ROW Property="Manufacturer" Value="EspoTek"/>
@@ -50,8 +51,8 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="AI_ExePath" ComponentId="{CED2FE51-CB11-4F88-813B-894507C1ED27}" Directory_="APPDIR" Attributes="260" KeyPath="AI_ExePath"/>
-    <ROW Component="B5158184F44A6981C5919229A6AEBE" ComponentId="{0C6331B3-341C-4D35-ACF1-980006F25940}" Directory_="APPDIR" Attributes="260" KeyPath="B5158184F44A6981C5919229A6AEBE" Options="2"/>
-    <ROW Component="D7E473DF14F3E98497864847195F2" ComponentId="{575CF57D-D4BA-478C-B6B5-3CEA0FE7CBD4}" Directory_="APPDIR" Attributes="260" KeyPath="D7E473DF14F3E98497864847195F2" Options="2"/>
+    <ROW Component="B35B3203FEB4CFFA576A27CB835D3E6" ComponentId="{00A4B40A-87F2-4B7A-92F0-551931D9B318}" Directory_="APPDIR" Attributes="260" KeyPath="B35B3203FEB4CFFA576A27CB835D3E6" Options="2"/>
+    <ROW Component="D36C9FE0826D4D2B9C2DDCCE2C83E860" ComponentId="{03696A80-19E5-4DD2-8115-8FE0A716AC0B}" Directory_="APPDIR" Attributes="260" KeyPath="D36C9FE0826D4D2B9C2DDCCE2C83E860" Options="2"/>
     <ROW Component="DC.tlw" ComponentId="{6AB2FA4C-B100-4F6B-B24F-532F61EDC57B}" Directory_="waveforms_Dir" Attributes="0" KeyPath="DC.tlw" Type="0"/>
     <ROW Component="DC.tlw_1" ComponentId="{5160514D-990F-4B97-835A-B48B2A2EC7AD}" Directory_="waveforms_1_Dir" Attributes="0" KeyPath="DC.tlw_1" Type="0"/>
     <ROW Component="Labrador.exe" ComponentId="{BB480720-125A-4928-9415-437B7CF4246A}" Directory_="APPDIR" Attributes="256" Condition="VersionNT64" KeyPath="Labrador.exe"/>
@@ -113,8 +114,8 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="AI32BitFiles" Title="32-bit" Description="32-bit Executables and Libraries" Display="5" Level="1" Directory_="APPDIR" Attributes="0" Components="Labrador.exe_1 Qt5Core.dll_1 Qt5Gui.dll_1 Qt5Svg.dll_1 Qt5Widgets.dll_1 bit d3dcompiler_47.dll_1 dfuprogrammer.exe libEGL.dll_1 libGLESV2.dll_1 opengl32sw.dll_1 qgif.dll_1 qicns.dll_1 qico.dll_1 qjpeg.dll_1 qsvg.dll_1 qsvgicon.dll_1 qtga.dll_1 qtiff.dll_1 qwbmp.dll_1 qwebp.dll_1 qwindows.dll_1 qwindowsvistastyle.dll_1"/>
     <ROW Feature="AI64BitFiles" Title="64-bit" Description="64-bit Executables and Libraries" Display="3" Level="1" Directory_="APPDIR" Attributes="0" Components="Labrador.exe Qt5Core.dll Qt5Gui.dll Qt5Svg.dll Qt5Widgets.dll SHORTCUTDIR d3dcompiler_47.dll libEGL.dll libGLESV2.dll opengl32sw.dll qgif.dll qicns.dll qico.dll qjpeg.dll qsvg.dll qsvgicon.dll qtga.dll qtiff.dll qwbmp.dll qwebp.dll qwindows.dll qwindowsvistastyle.dll"/>
-    <ROW Feature="B5158184F44A6981C5919229A6AEBE" Title="Visual C++ Redistributable for Visual Studio 2015 Update 3 x64" Description="Visual C++ Redistributable for Visual Studio 2015 Update 3 x64" Display="9" Level="1" Attributes="0" Components="B5158184F44A6981C5919229A6AEBE"/>
-    <ROW Feature="D7E473DF14F3E98497864847195F2" Title="Visual C++ Redistributable for Visual Studio 2015 Update 3 x86" Description="Visual C++ Redistributable for Visual Studio 2015 Update 3 x86" Display="7" Level="1" Attributes="0" Components="D7E473DF14F3E98497864847195F2"/>
+    <ROW Feature="B35B3203FEB4CFFA576A27CB835D3E6" Title="Visual C++ Redistributable for Visual Studio 2017 x86" Description="Visual C++ Redistributable for Visual Studio 2017 x86" Display="13" Level="1" Attributes="0" Components="B35B3203FEB4CFFA576A27CB835D3E6"/>
+    <ROW Feature="D36C9FE0826D4D2B9C2DDCCE2C83E860" Title="Visual C++ Redistributable for Visual Studio 2017 x64" Description="Visual C++ Redistributable for Visual Studio 2017 x64" Display="11" Level="1" Attributes="0" Components="D36C9FE0826D4D2B9C2DDCCE2C83E860"/>
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AI_ExePath DC.tlw DC.tlw_1 ProductInformation dfuprogrammer.exe_1 flash.bat flash.bat_1 libusbK.dll libusbK.dll_1 qt_ar.qm qt_ar.qm_1 settings.ini.bak settings.ini.bak_1"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
   </COMPONENT>
@@ -272,13 +273,13 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
     <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
     <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
-    <ROW Action="AI_DownloadPrereq" Description="Downloading prerequisite software" Template="Downloading [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_DownloadPrereq" TemplateLocId="ActionText.Template.AI_DownloadPrereq"/>
+    <ROW Action="AI_DownloadPrereq" Description="Downloading prerequisite software" DescriptionLocId="ActionText.Description.AI_DownloadPrereq" Template="Downloading [1]{[2] completed}" TemplateLocId="ActionText.Template.AI_DownloadPrereq"/>
     <ROW Action="AI_ExtractFiles" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
     <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
-    <ROW Action="AI_ExtractPrereq" Description="Extracting prerequisite software" Template="Extracting [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_ExtractPrereq" TemplateLocId="ActionText.Template.AI_ExtractPrereq"/>
-    <ROW Action="AI_InstallPostPrerequisite" Description="Installing prerequisite software" Template="Installing [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
-    <ROW Action="AI_InstallPrerequisite" Description="Installing prerequisite software" Template="Installing [1]{[2] completed}" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
-    <ROW Action="AI_VerifyPrereq" Description="Verifying prerequisites" Template="[1] was not installed correctly." DescriptionLocId="ActionText.Description.AI_VerifyPrereq" TemplateLocId="ActionText.Template.AI_VerifyPrereq"/>
+    <ROW Action="AI_ExtractPrereq" Description="Extracting prerequisite software" DescriptionLocId="ActionText.Description.AI_ExtractPrereq" Template="Extracting [1]{[2] completed}" TemplateLocId="ActionText.Template.AI_ExtractPrereq"/>
+    <ROW Action="AI_InstallPostPrerequisite" Description="Installing prerequisite software" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" Template="Installing [1]{[2] completed}" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
+    <ROW Action="AI_InstallPrerequisite" Description="Installing prerequisite software" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" Template="Installing [1]{[2] completed}" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
+    <ROW Action="AI_VerifyPrereq" Description="Verifying prerequisites" DescriptionLocId="ActionText.Description.AI_VerifyPrereq" Template="[1] was not installed correctly." TemplateLocId="ActionText.Template.AI_VerifyPrereq"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
     <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
@@ -421,8 +422,8 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
     <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
-    <ROW Registry="B5158184F44A6981C5919229A6AEBE" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]\[ProductVersion]" Name="B5158184F44A6981C5919229A6AEBE" Value="1" Component_="B5158184F44A6981C5919229A6AEBE"/>
-    <ROW Registry="D7E473DF14F3E98497864847195F2" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]\[ProductVersion]" Name="D7E473DF14F3E98497864847195F2" Value="1" Component_="D7E473DF14F3E98497864847195F2"/>
+    <ROW Registry="B35B3203FEB4CFFA576A27CB835D3E6" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]\[ProductVersion]" Name="B35B3203FEB4CFFA576A27CB835D3E6" Value="1" Component_="B35B3203FEB4CFFA576A27CB835D3E6"/>
+    <ROW Registry="D36C9FE0826D4D2B9C2DDCCE2C83E860" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]\[ProductVersion]" Name="D36C9FE0826D4D2B9C2DDCCE2C83E860" Value="1" Component_="D36C9FE0826D4D2B9C2DDCCE2C83E860"/>
     <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
@@ -438,17 +439,16 @@
     <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
-    <ROW PrereqKey="B5158184F44A6981C5919229A6AEBE" DisplayName="Visual C++ Redistributable for Visual Studio 2015 Update 3 x64" VersionMin="14.0" SetupFileUrl="Prerequisites\Visual C++ Redistributable for Visual Studio 2015\vc2015u3_redist_x64.exe" Location="0" ExactSize="0" WinNTVersions="Windows 9x/ME/NT/2000/XP/Vista/Windows 7/Windows 8 x86/Windows 8.1 x86/Windows 10 x86" Operator="1" Options="xf" TargetName="Visual C++ Redistributable for Visual Studio 2015\vc2015u3_redist_x64.exe" Feature="B5158184F44A6981C5919229A6AEBE"/>
-    <ROW PrereqKey="D7E473DF14F3E98497864847195F2" DisplayName="Visual C++ Redistributable for Visual Studio 2015 Update 3 x86" VersionMin="14.0" SetupFileUrl="Prerequisites\Visual C++ Redistributable for Visual Studio 2015\vc2015u3_redist_x86.exe" Location="0" ExactSize="0" WinNT64Versions="Windows XP/Vista/Windows 7/Windows 8 x64/Windows 8.1 x64/Windows 10 x64" Operator="0" Options="f" TargetName="Visual C++ Redistributable for Visual Studio 2015\vc2015u3_redist_x86.exe" Feature="D7E473DF14F3E98497864847195F2"/>
+    <ROW PrereqKey="B35B3203FEB4CFFA576A27CB835D3E6" DisplayName="Visual C++ Redistributable for Visual Studio 2017 x86" VersionMin="14.16" SetupFileUrl="Prerequisites\Visual C++ Redistributable for Visual Studio 2017\vc_redist.x86.exe" Location="0" ExactSize="0" WinNTVersions="Windows Vista RTM x86, Windows Vista SP1 x86, Windows Server 2008 RTM x86, Windows 7 RTM x86" WinNT64Versions="Windows Vista RTM x64, Windows Vista SP1 x64, Windows Server 2008 RTM x64, Windows 7 RTM x64, Windows Server 2008 R2 RTM x64" Operator="0" NoUiComLine="/q /norestart" Options="f" TargetName="Visual C++ Redistributable for Visual Studio 2017\vc_redist.x86.exe" Feature="B35B3203FEB4CFFA576A27CB835D3E6"/>
+    <ROW PrereqKey="D36C9FE0826D4D2B9C2DDCCE2C83E860" DisplayName="Visual C++ Redistributable for Visual Studio 2017 x64" VersionMin="14.16" SetupFileUrl="Prerequisites\Visual C++ Redistributable for Visual Studio 2017\vc_redist.x64.exe" Location="0" ExactSize="0" WinNTVersions="Windows 9x/ME/NT/2000/XP/Vista/Windows 7/Windows 8 x86/Windows 8.1 x86/Windows 10 x86" WinNT64Versions="Windows Vista RTM x64, Windows Vista SP1 x64, Windows Server 2008 RTM x64, Windows 7 RTM x64, Windows Server 2008 R2 RTM x64" Operator="1" Options="xf" TargetName="Visual C++ Redistributable for Visual Studio 2017\vc_redist.x64.exe" Feature="D36C9FE0826D4D2B9C2DDCCE2C83E860"/>
     <ROW PrereqKey="ZipSFX" DisplayName="EspoTek Labrador Driver (Bootloader)" VersionMin="1.4.1.2100" SetupFileUrl="driver\Bootloader_Install.exe" Location="0" ExactSize="0" Operator="1" Options="yi" TargetName="Bootloader_Install.exe"/>
     <ROW PrereqKey="ZipSFX_1" DisplayName="EspoTek Labrador Driver (Primary)" VersionMin="1.4.1.2100" SetupFileUrl="driver\Driver_Install.exe" Location="0" ExactSize="0" Operator="1" Options="yi" TargetName="Driver_Install.exe"/>
-    <ATTRIBUTE name="PrereqsOrder" value="ZipSFX ZipSFX_1 D7E473DF14F3E98497864847195F2 B5158184F44A6981C5919229A6AEBE"/>
+    <ATTRIBUTE name="PrereqsOrder" value="ZipSFX ZipSFX_1 D36C9FE0826D4D2B9C2DDCCE2C83E860 B35B3203FEB4CFFA576A27CB835D3E6"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
-    <ROW SearchKey="B5158184F44A6981C5919229A6AEBEVersion" Prereq="B5158184F44A6981C5919229A6AEBE" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\DevDiv\VC\Servicing\14.0\RuntimeMinimum\Version" VerMin="14.0.24212" Order="1" Property="PreReqSearch_B5158184F44A6981C5919229A6AEBE"/>
-    <ROW SearchKey="D7E473DF14F3E98497864847195F2SystemFoldermsvcp140.dll" Prereq="D7E473DF14F3E98497864847195F2" SearchType="0" SearchString="[SystemFolder]msvcp140.dll" VerMin="14.0.24212" Order="2" Property="PreReqSearch_1_D7E473DF14F3E98497864847195F2"/>
-    <ROW SearchKey="D7E473DF14F3E98497864847195F2SystemFoldervcruntime140.dll" Prereq="D7E473DF14F3E98497864847195F2" SearchType="0" SearchString="[SystemFolder]vcruntime140.dll" VerMin="14.0.24212" Order="3" Property="PreReqSearch_2_D7E473DF14F3E98497864847195F2"/>
-    <ROW SearchKey="D7E473DF14F3E98497864847195F2Version" Prereq="D7E473DF14F3E98497864847195F2" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\DevDiv\VC\Servicing\14.0\RuntimeMinimum\Version" VerMin="14.0.24212" Order="1" Property="PreReqSearch_D7E473DF14F3E98497864847195F2"/>
+    <ROW SearchKey="B35B3203FEB4CFFA576A27CB835D3E6Syst" Prereq="B35B3203FEB4CFFA576A27CB835D3E6" SearchType="0" SearchString="[SystemFolder]vcruntime140.dll" VerMin="14.16.27012" Order="2" Property="PreReqSearch_2_B35B3203FEB4CFFA576A"/>
+    <ROW SearchKey="B35B3203FEB4CFFA576A27CB835D3E6Vers" Prereq="B35B3203FEB4CFFA576A27CB835D3E6" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\DevDiv\VC\Servicing\14.0\RuntimeMinimum\Version" VerMin="14.16.27012" Order="1" Property="PreReqSearch_B35B3203FEB4CFFA576A27"/>
+    <ROW SearchKey="D36C9FE0826D4D2B9C2DDCCE2C83E860Ver" Prereq="D36C9FE0826D4D2B9C2DDCCE2C83E860" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\DevDiv\VC\Servicing\14.0\RuntimeMinimum\Version" VerMin="14.16.27012" Order="1" Property="PreReqSearch_D36C9FE0826D4D2B9C2DDC" Platform="1"/>
     <ROW SearchKey="SystemFolderfile.dll" Prereq="ZipSFX" SearchType="0" SearchString="[SystemFolder]file.dll" VerMin="1.0" Order="1" Property="PreReqSearch"/>
     <ROW SearchKey="SystemFolderfile.dll_1" Prereq="ZipSFX_1" SearchType="0" SearchString="[SystemFolder]file.dll" VerMin="1.0" Order="1" Property="PreReqSearch_1"/>
   </COMPONENT>
