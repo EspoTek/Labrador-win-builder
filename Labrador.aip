@@ -443,7 +443,8 @@
     <ROW PrereqKey="D36C9FE0826D4D2B9C2DDCCE2C83E860" DisplayName="Visual C++ Redistributable for Visual Studio 2017 x64" VersionMin="14.16" SetupFileUrl="Prerequisites\Visual C++ Redistributable for Visual Studio 2017\vc_redist.x64.exe" Location="0" ExactSize="0" WinNTVersions="Windows 9x/ME/NT/2000/XP/Vista/Windows 7/Windows 8 x86/Windows 8.1 x86/Windows 10 x86" WinNT64Versions="Windows Vista RTM x64, Windows Vista SP1 x64, Windows Server 2008 RTM x64, Windows 7 RTM x64, Windows Server 2008 R2 RTM x64" Operator="1" Options="xf" TargetName="Visual C++ Redistributable for Visual Studio 2017\vc_redist.x64.exe" Feature="D36C9FE0826D4D2B9C2DDCCE2C83E860"/>
     <ROW PrereqKey="ZipSFX" DisplayName="EspoTek Labrador Driver (Bootloader)" VersionMin="1.4.1.2100" SetupFileUrl="driver\Bootloader_Install.exe" Location="0" ExactSize="0" Operator="1" Options="yi" TargetName="Bootloader_Install.exe"/>
     <ROW PrereqKey="ZipSFX_1" DisplayName="EspoTek Labrador Driver (Primary)" VersionMin="1.4.1.2100" SetupFileUrl="driver\Driver_Install.exe" Location="0" ExactSize="0" Operator="1" Options="yi" TargetName="Driver_Install.exe"/>
-    <ATTRIBUTE name="PrereqsOrder" value="ZipSFX ZipSFX_1 D36C9FE0826D4D2B9C2DDCCE2C83E860 B35B3203FEB4CFFA576A27CB835D3E6"/>
+    <ROW PrereqKey="ZipSFX_2" DisplayName="EspoTek Labrador Driver (Misconfigured Batch Feb 2020)" VersionMin="1.4.1.2100" SetupFileUrl="driver\Gobindar_Install.exe" Location="0" ExactSize="0" Operator="1" Options="yi" TargetName="Gobindar_Install.exe"/>
+    <ATTRIBUTE name="PrereqsOrder" value="ZipSFX ZipSFX_1 ZipSFX_2 D36C9FE0826D4D2B9C2DDCCE2C83E860 B35B3203FEB4CFFA576A27CB835D3E6"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
     <ROW SearchKey="B35B3203FEB4CFFA576A27CB835D3E6Syst" Prereq="B35B3203FEB4CFFA576A27CB835D3E6" SearchType="0" SearchString="[SystemFolder]vcruntime140.dll" VerMin="14.16.27012" Order="2" Property="PreReqSearch_2_B35B3203FEB4CFFA576A"/>
@@ -451,5 +452,6 @@
     <ROW SearchKey="D36C9FE0826D4D2B9C2DDCCE2C83E860Ver" Prereq="D36C9FE0826D4D2B9C2DDCCE2C83E860" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\DevDiv\VC\Servicing\14.0\RuntimeMinimum\Version" VerMin="14.16.27012" Order="1" Property="PreReqSearch_D36C9FE0826D4D2B9C2DDC" Platform="1"/>
     <ROW SearchKey="SystemFolderfile.dll" Prereq="ZipSFX" SearchType="0" SearchString="[SystemFolder]file.dll" VerMin="1.0" Order="1" Property="PreReqSearch"/>
     <ROW SearchKey="SystemFolderfile.dll_1" Prereq="ZipSFX_1" SearchType="0" SearchString="[SystemFolder]file.dll" VerMin="1.0" Order="1" Property="PreReqSearch_1"/>
+    <ROW SearchKey="SystemFolderfile.dll_2" Prereq="ZipSFX_2" SearchType="0" SearchString="[SystemFolder]file.dll" VerMin="1.0" Order="1" Property="PreReqSearch_2"/>
   </COMPONENT>
 </DOCUMENT>
