@@ -438,8 +438,8 @@
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="Labrador.exe" Directory_="AI_Sh32_Dir" Name="Labrador.exe" Component_="Labrador.exe_1" Target="[#Labrador.exe_1]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
-    <ROW Shortcut="Labrador.exe_1" Directory_="SHORTCUTDIR" Name="Labrador.exe" Component_="Labrador.exe" Target="[#Labrador.exe]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="Labrador.exe" Directory_="AI_Sh32_Dir" Name="ESPOTE~1|EspoTek Labrador" Component_="Labrador.exe_1" Target="[#Labrador.exe_1]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="Labrador.exe_1" Directory_="SHORTCUTDIR" Name="ESPOTE~1|EspoTek Labrador" Component_="Labrador.exe" Target="[#Labrador.exe]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
