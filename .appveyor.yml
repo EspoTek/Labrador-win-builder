@@ -23,7 +23,8 @@ artifacts:
 
 deploy:
   tag: continuous-win32
-  description: 'Labrador Installer for Windows (32 and 64-bit)'
+  release: 'Continuous Build (Windows)'
+  description: 'Labrador Installer for Windows 7 or later (32-bit and 64-bit supported)'
   provider: GitHub
   auth_token:
       secure: DXAumCpZjJ3erz0OmBJybIJTwux9uSrdtqKtezd4wI9b2ELz3NELPwZfp+WfYKtb
