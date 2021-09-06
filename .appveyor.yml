@@ -27,7 +27,7 @@ deploy:
   description: 'Labrador Installer for Windows 7 or later (32-bit and 64-bit supported)'
   provider: GitHub
   auth_token:
-      secure: DXAumCpZjJ3erz0OmBJybIJTwux9uSrdtqKtezd4wI9b2ELz3NELPwZfp+WfYKtb
+      secure: 0uxsfE7N2HTcPQtM48XlcCDG1Lxf/xELs0S5GvnoGSDZWOkAJxukffyOOcuj1LGM
   repository: EspoTek/Labrador
   draft: false
   prerelease: false
